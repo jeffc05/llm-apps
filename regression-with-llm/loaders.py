@@ -1,7 +1,7 @@
 from datetime import datetime
 from tqdm import tqdm
 from datasets import load_dataset
-from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
+from concurrent.futures import ProcessPoolExecutor
 from items import Item
 
 CHUNK_SIZE = 1000
@@ -9,7 +9,6 @@ MIN_PRICE = 0.5
 MAX_PRICE = 999.49
 
 class ItemLoader:
-
 
     def __init__(self, name):
         self.name = name
@@ -75,7 +74,3 @@ class ItemLoader:
         finish = datetime.now()
         print(f"Completed {self.name} with {len(results):,} datapoints in {(finish-start).total_seconds()/60:.1f} mins", flush=True)
         return results
-        
-
-    
-    

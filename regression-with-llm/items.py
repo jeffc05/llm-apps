@@ -2,7 +2,7 @@ from typing import Optional
 from transformers import AutoTokenizer
 import re
 
-BASE_MODEL = "meta-llama/Meta-Llama-3.1-8B"
+BASE_MODEL = "deepseek-ai/DeepSeek-R1"
 
 MIN_TOKENS = 150 # Any less than this, and we don't have enough useful content
 MAX_TOKENS = 160 # Truncate after this many tokens. Then after adding in prompt text, we will get to around 180 tokens
@@ -96,8 +96,3 @@ class Item:
         Return a String version of this Item
         """
         return f"<{self.title} = ${self.price}>"
-
-        
-
-    
-    
