@@ -1,2 +1,3 @@
 .env
 *.pkl
+.qodo/history.sqlite
